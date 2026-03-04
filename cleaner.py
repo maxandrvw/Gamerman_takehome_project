@@ -46,12 +46,7 @@ def data_cleaner(dataframe): # cleans dataframe, adds calculated variables of in
         "Marginal Cost Congestion ($/MWHr)"     : "Marginal Cost Congestion"
         })
 
-    # df_copy["Time Stamp"] = pd.to_datetime(df_copy["Time Stamp"], errors='coerce') # edits datatypes, only 'Name'/'Zone' differ from required format, thus the rest are commented out
-    df_copy["Zone"] = df_copy["Zone"].astype("category")
-    # df_copy["PTID"] = df_copy["PTID"].astype("int64")
-    # df_copy["LBMP"] = df_copy["LBMP"].astype("float64")
-    # df_copy["Marginal Cost Losses"] = df_copy["Marginal Cost Losses"].astype("float64")
-    # df_copy["Marginal Cost Congestion"] = df_copy["Marginal Cost Congestion"].astype("float64")
+    df_copy["Zone"] = df_copy["Zone"].astype("category") # only variable that wasn't in the correct format
 
     zones = [ # list for NY zones
     "CAPITL", 

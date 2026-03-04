@@ -15,9 +15,6 @@ def format_CSV(pathway): # formats CSV for analysis
 
     df_pivot["SPREAD"] = df_pivot["N.Y.C."] - df_pivot["WEST"] # calculates spread in LBMP between and Zone J (N.Y.C.) and Zone A (West), key variable of interest
 
-    zones = ["CAPITL", "CENTRL", "DUNWOD", "GENESE", "HUD VL", "LONGIL", 
-        "MHK VL", "MILLWD", "N.Y.C.", "NORTH", "WEST"] # list of NY zone names
-
     df_pivot["hour"] = df_pivot.index.hour # generates time-based predictor variables
     df_pivot["month"] = df_pivot.index.month
     df_pivot["day_of_week"] = df_pivot.index.dayofweek
